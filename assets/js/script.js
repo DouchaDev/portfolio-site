@@ -1,13 +1,41 @@
 // Sidebar toggle (only present on sub-pages)
 const sidebar = document.querySelector('.sidebar');
 const toggle = document.querySelector('.sidebar-toggle');
-const toggleTheme = document.getElementById('theme-toggle');
 
 // Load nav.html into all pages
-fetch("/portfolio-site/components/nav.html")
+const navPath = location.pathname.includes("/projects/")
+  ? "../components/nav.html"
+  : "components/nav.html";
+
+fetch(navPath)
   .then(response => response.text())
   .then(data => {
     document.getElementById("nav-placeholder").innerHTML = data;
+
+    const toggleTheme = document.getElementById('theme-toggle');
+
+    // Apply saved theme on load 
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "light") {
+        document.documentElement.classList.add("light");
+        toggleTheme.textContent = "🌙"; 
+    }
+
+    // Toggle light/dark theme
+    if (toggleTheme) {
+        toggleTheme.addEventListener('click', () => {
+            document.documentElement.classList.toggle('light');
+            toggleTheme.classList.toggle('active');
+            
+            // Optional: change icon 
+            const isLight = document.documentElement.classList.contains('light'); 
+            toggleTheme.textContent = isLight ? "🌙" : "☀️";
+
+            // Save preference
+            localStorage.setItem("theme", isLight ? "light" : "dark");
+        });
+    }
   });
 
 if (sidebar && toggle) {
@@ -27,20 +55,7 @@ document.querySelectorAll('a[href^="#"]').forEach( () => {
     });
 });
 
-// Toggle light/dark theme
-if (toggleTheme) {
-    toggleTheme.addEventListener('click', () => {
-        document.documentElement.classList.toggle('light');
-        toggleTheme.classList.toggle('active');
-        
-        // Optional: change icon 
-        if (document.documentElement.classList.contains('light')) { 
-            toggleTheme.textContent = "🌙"; 
-        } else {
-             toggleTheme.textContent = "☀️"; 
-        }
-    });
-}
+
 
 
 
