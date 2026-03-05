@@ -224,8 +224,7 @@ nav a:hover {
     position: relative;
 }
 
-.sidebar {
-    padding-top: 280px;
+.sidebar {    
     width: 260px;
     background: var(--bg-panel);
     border-right: 1px solid var(--border-panel);
@@ -237,6 +236,7 @@ nav a:hover {
     transform: translateX(-100%);
     transition: var(--transition);
     z-index: 20;
+    padding-top: 80px !important; /* To push the sidebar content below the hero section */
 }
 
 .sidebar.open {

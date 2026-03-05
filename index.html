@@ -8,17 +8,7 @@
 <body>
 
 <nav>
-    <div class="nav-logo">RAJ</div>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="deepdives.html">Deep Dives</a>
-        <a href="leadership.html">Leadership</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-
-        <button id="theme-toggle"  class="theme-btn">☀️</button>
-    </div>
+    <div id="nav-placeholder"></div>
 </nav>
 
 <section class="hero">
@@ -57,5 +47,15 @@
 </footer>
 
 <script src="assets/js/script.js"></script>
+<script>
+fetch("nav.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("nav-placeholder").innerHTML = data;
+  });
+</script>
+
+
+
 </body>
 </html>
