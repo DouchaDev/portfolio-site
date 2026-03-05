@@ -7,10 +7,7 @@
 </head>
 <body>
 
-<nav>
-    <div class="nav-logo">RAJ</div>
-    <div id="nav-placeholder"></div>
-</nav>
+<div id="nav-placeholder"></div>
 
 <section class="section">
     <h2>Projects</h2>
@@ -39,5 +36,12 @@
 </footer>
 
 <script src="assets/js/script.js"></script>
+<script>
+fetch("/portfolio-site/components/nav.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("nav-placeholder").innerHTML = data;
+  });
+</script>
 </body>
 </html>
