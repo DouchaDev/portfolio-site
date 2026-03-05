@@ -48,7 +48,7 @@
 
 <script src="assets/js/script.js"></script>
 <script>
-fetch("nav.html")
+fetch("/portfolio-site/components/nav.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("nav-placeholder").innerHTML = data;
