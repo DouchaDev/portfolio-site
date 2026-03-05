@@ -3,6 +3,13 @@ const sidebar = document.querySelector('.sidebar');
 const toggle = document.querySelector('.sidebar-toggle');
 const toggleTheme = document.getElementById('theme-toggle');
 
+// Load nav.html into all pages
+fetch("/portfolio-site/components/nav.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("nav-placeholder").innerHTML = data;
+  });
+
 if (sidebar && toggle) {
     toggle.addEventListener('click', () => {
         sidebar.classList.toggle('open');
@@ -35,10 +42,5 @@ if (toggleTheme) {
     });
 }
 
-// Load nav.html into all pages
-/*fetch("/portfolio-site/components/nav.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("nav-placeholder").innerHTML = data;
-  });*/
+
 
