@@ -36,7 +36,22 @@ fetch(navPath)
             localStorage.setItem("theme", isLight ? "light" : "dark");
         });
     }
+
+    // Rewrite the releative paths due to folder depth differences between index.html and project pages
+    if (location.pathname.includes("/projects/")) {
+    document.querySelectorAll("nav a").forEach(link => {
+        const href = link.getAttribute("href");
+
+        // Only rewrite relative links, not external URLs
+        if (!href.startsWith("http") && !href.startsWith("#")) {
+            link.setAttribute("href", "../" + href);
+        }
+    });
+}
+
   });
+
+
 
 if (sidebar && toggle) {
     toggle.addEventListener('click', () => {

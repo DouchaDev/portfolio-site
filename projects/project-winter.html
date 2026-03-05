@@ -5,6 +5,7 @@
     <title>Project Winter | Damian Rajamanie</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
 
 <div id="nav-placeholder"></div>
@@ -16,39 +17,112 @@
         <h2>Project Winter</h2>
         <a href="#overview">Overview</a>
         <a href="#role">My Role</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#challenges">Challenges & Solutions</a>
-        <a href="#outcomes">Outcomes</a>
+        <a href="#deepdive">Technical Deep Dive</a>
+        <a href="#gallery">Gallery</a>
     </aside>
 
     <main class="content">
-        <h1 id="overview">Project Winter</h1>
-        <p>
-            Flagship live-service multiplayer title shipped on PC, Xbox, PlayStation, and Nintendo Switch with ongoing content updates.
-        </p>
 
-        <h2 id="role">My Role</h2>
-        <p>
-            Senior Programmer responsible for live-service maintenance, feature development, performance optimization, and backend integration.
-        </p>
+        <!-- HERO -->
+        <section class="project-hero">
+            <h1>Project Winter</h1>
+            <p class="subtitle">Technical Director • Multiplayer Social Deception Survival Game</p>
+        </section>
 
-        <h2 id="architecture">Architecture</h2>
-        <p>
-            Describe the high-level architecture here: client, backend services, matchmaking, analytics, etc.
-        </p>
+        
 
-        <h2 id="challenges">Challenges & Solutions</h2>
-        <p>
-            Talk about specific technical or production challenges and how you addressed them.
-        </p>
+        
+        <!-- OVERVIEW -->
+        <section class="project-overview">
+            <h2 id="overview">Overview</h2>
+            <p>
+                Project Winter is an 8‑player social deception survival game where communication, teamwork, and betrayal
+                shape every match. Players must gather resources, repair structures, and survive the elements—while traitors
+                work from within to sabotage the group. The game blends cooperative survival with hidden‑role mechanics,
+                creating unpredictable and highly replayable sessions.
+            </p>
 
-        <h2 id="outcomes">Outcomes</h2>
-        <p>
-            Summarize impact: revenue, player retention, stability, performance improvements, team alignment.
-        </p>
+            <!-- TRAILER -->
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/watch?v=bVfeoAXhtGo"
+                    title="Project Winter 2.0: Cabbin Fever Trailer"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- LINKS -->
+            <div class="project-links">
+                <a class="btn" href="PLACEHOLDER_OFFICIAL_SITE" target="_blank">
+                    <img src="../assets/images/project-winter-site-logo.png" alt="Official Website">
+                </a>
+                <a class="btn" href="PLACEHOLDER_STEAM_LINK" target="_blank">
+                    <img src="../assets/images/logo-steam.svg" alt="Steam Store">
+                </a>
+            </div>
+        </section>
+
+        <!-- ROLE -->
+        <section class="project-role">
+            <h2 id="role">My Role</h2>
+            <ul>
+                <li>Led engineering across gameplay, backend, and live operations for a cross‑platform multiplayer title.</li>
+                <li>Architected scalable networking systems supporting over one million players across PC and console.</li>
+                <li>Oversaw CI/CD pipelines, build automation, and deployment workflows for rapid iteration.</li>
+                <li>Optimized performance across Unity, console hardware, and cross‑platform networking conditions.</li>
+                <li>Collaborated with design, production, and QA to deliver features under tight live‑service timelines.</li>
+            </ul>
+        </section>
+
+        <!-- TECHNICAL DEEP DIVE -->
+        <section class="project-deepdive">
+            <h2 id="deepdive">Technical Deep Dive</h2>
+            <p>
+                I designed the authoritative server model using a hybrid relay + dedicated server architecture to support
+                low‑latency cross‑platform play. The system included:
+            </p>
+            <ul>
+                <li>Custom matchmaking with role weighting, social grouping, and region‑based routing.</li>
+                <li>Predictive movement and rollback compensation to handle unreliable network conditions.</li>
+                <li>Telemetry‑driven balancing tools enabling live tuning of roles, sabotage mechanics, and progression.</li>
+                <li>Automated crash reporting, health dashboards, and alerting for live‑service stability.</li>
+            </ul>
+        </section>
+
+        <!-- GALLERY -->
+
+        <section class="gallery">
+            <h2 id="gallery">Gallery</h2>
+
+            <div class="gallery-panels">
+                <div class="panel">
+                    <h3>Technical Leadership</h3>
+                    <p>Aligning teams on shared architecture, mentoring engineers, and delivering features on tight timelines.</p>
+                    <img src="PLACEHOLDERIMAGE1" alt="Project Winter screenshot 1">
+                </div>
+
+                <div class="panel">
+                    <h3>Systems & Backend</h3>
+                    <p>Designing and operating backend services, BaaS integrations, and deployment pipelines for live games.</p>
+                    <img src="PLACEHOLDERIMAGE2" alt="Project Winter screenshot 2">
+                </div>
+
+                <div class="panel">
+                    <h3>Performance & Optimization</h3>
+                    <p>Improving frame rates, memory usage, and load times across console, PC, mobile, and VR platforms.</p>
+                    <img src="PLACEHOLDERIMAGE3" alt="Project Winter screenshot 3">
+                </div>
+            </div>
+        </section>
+
+
     </main>
 </div>
 
+<!-- GLOBAL SCRIPTS -->
 <script src="../assets/js/script.js"></script>
+
 </body>
 </html>
