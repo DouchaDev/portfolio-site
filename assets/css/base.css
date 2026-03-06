@@ -141,7 +141,7 @@ nav a:hover {
     gap: 24px;
 }
 
-.grid-3 {
+.grid-3 {    
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
